@@ -9,7 +9,8 @@ public class Hacker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var generalGreeting = "Welcome at Terminal Hacker Game";
+        CookCurry("lamb");
+        var generalGreeting = "Welcome to Terminal Hacker Game";
         Terminal.WriteLine(generalGreeting);
         ShowMainMenu();
     }
@@ -21,6 +22,12 @@ public class Hacker : MonoBehaviour
         Terminal.WriteLine("Press 1 for the local liberary");
         Terminal.WriteLine("Press 2 for the police station");
         Terminal.WriteLine("Enter you selection: ");
+    }
+
+    void CookCurry(string meatToUse)
+    {
+        // common cooking steps go here 
+        print("Iam adding the " + meatToUse);
     }
 
     // Update is called once per frame
