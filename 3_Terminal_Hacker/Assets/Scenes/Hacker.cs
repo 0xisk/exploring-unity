@@ -25,6 +25,11 @@ public class Hacker : MonoBehaviour
     {
         // common cooking steps go here 
         print("Iam adding the " + meatToUse);
+    } 
+
+    void OnUserInput(string input)
+    {
+        Terminal.WriteLine("The user types " + input);
     }
 
     // Update is called once per frame
