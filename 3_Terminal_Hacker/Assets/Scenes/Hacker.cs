@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour
 {
-    string greeting = "Hello Iskander!";
-
     // Start is called before the first frame update
     void Start()
     {
-        CookCurry("lamb");
         var generalGreeting = "Welcome to Terminal Hacker Game";
         Terminal.WriteLine(generalGreeting);
-        ShowMainMenu();
+        ShowMainMenu("Hello Iskander!");
     }
 
-    void ShowMainMenu()
+    void ShowMainMenu(string greeting)
     {
         Terminal.WriteLine(greeting);
         Terminal.WriteLine("What would you like to hack into?");
