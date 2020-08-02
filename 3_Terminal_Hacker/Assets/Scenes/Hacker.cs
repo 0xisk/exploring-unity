@@ -29,12 +29,13 @@ public class Hacker : MonoBehaviour
 
     void OnUserInput(string input)
     {
-        Terminal.WriteLine("The user types " + input);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        print(input == "1");
+        /*if (input = "1")
+        {
+            Terminal.WriteLine(true);
+        } else
+        {
+            Terminal.WriteLine(false);
+        }*/
     }
 }
