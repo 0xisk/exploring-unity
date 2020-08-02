@@ -14,6 +14,7 @@ public class Hacker : MonoBehaviour
 
     void ShowMainMenu(string greeting)
     {
+        Terminal.ClearScreen();
         Terminal.WriteLine(greeting);
         Terminal.WriteLine("What would you like to hack into?");
         Terminal.WriteLine("Press 1 for the local liberary");
@@ -29,13 +30,9 @@ public class Hacker : MonoBehaviour
 
     void OnUserInput(string input)
     {
-        print(input == "1");
-        /*if (input = "1")
+        if (input == "menu")
         {
-            Terminal.WriteLine(true);
-        } else
-        {
-            Terminal.WriteLine(false);
-        }*/
+            ShowMainMenu("Hello Iskander!");
+        }
     }
 }
