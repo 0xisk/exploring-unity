@@ -33,6 +33,15 @@ public class Hacker : MonoBehaviour
         if (input == "menu")
         {
             ShowMainMenu("Hello Iskander!");
-        }
+        } 
+        else if (input == "1")
+        {
+            StartGame(1);
+        } 
+    }
+
+    void StartGame(int level) 
+    {
+        Terminal.WriteLine("You have chosen level" + level);
     }
 }
