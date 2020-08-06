@@ -7,6 +7,16 @@ public class Hacker : MonoBehaviour
     // Game state 
     int level;
 
+    // Enumerations in C#
+    enum Screen 
+    {
+        MainMenu, 
+        Password,
+        Win
+    };
+
+    Screen currentScreen;
+
     // Start is called before the first frame update
     void Start()
     {
