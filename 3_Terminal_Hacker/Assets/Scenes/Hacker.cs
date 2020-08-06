@@ -42,6 +42,11 @@ public class Hacker : MonoBehaviour
             level = 1;
             StartGame();
         } 
+        else if (input == "2")
+        {
+            level = 2;
+            StartGame();
+        } 
         else 
         {
             Terminal.WriteLine("Please choose a valid number");
@@ -51,5 +56,6 @@ public class Hacker : MonoBehaviour
     void StartGame() 
     {
         Terminal.WriteLine("You have chosen level" + level);
+        Terminal.WriteLine("Please enter you password: ");
     }
 }
