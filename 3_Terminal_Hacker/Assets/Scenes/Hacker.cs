@@ -15,7 +15,7 @@ public class Hacker : MonoBehaviour
         Win
     };
 
-    Screen currentScreen;
+    Screen currentScreen = Screen.MainMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +59,7 @@ public class Hacker : MonoBehaviour
         } 
         else 
         {
+            currentScreen = Screen.Password;
             Terminal.WriteLine("Please choose a valid number");
         }
     }
