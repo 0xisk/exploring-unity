@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour
 {
+    // Game state 
+    int level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +39,16 @@ public class Hacker : MonoBehaviour
         } 
         else if (input == "1")
         {
-            StartGame(1);
+            level = 1;
+            StartGame();
         } 
+        else 
+        {
+            Terminal.WriteLine("Please choose a valid number");
+        }
     }
 
-    void StartGame(int level) 
+    void StartGame() 
     {
         Terminal.WriteLine("You have chosen level" + level);
     }
