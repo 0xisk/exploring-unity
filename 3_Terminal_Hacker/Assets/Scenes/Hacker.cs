@@ -47,7 +47,15 @@ public class Hacker : MonoBehaviour
         {
             ShowMainMenu("Hello Iskander!");
         } 
-        else if (input == "1")
+        else if (currentScreen == Screen.MainMenu)
+        {
+            RunMainMenu(input);
+        }
+    }
+
+    void RunMainMenu(string input)
+    {
+        if (input == "1")
         {
             level = 1;
             StartGame();
