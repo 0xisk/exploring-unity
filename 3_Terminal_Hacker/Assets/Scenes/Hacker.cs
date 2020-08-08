@@ -148,9 +148,9 @@ public class Hacker : MonoBehaviour
                 ");
                 Terminal.WriteLine("Play again with a greater challenge.");
                 break;
-            case 2: 
+            case 3: 
                 Terminal.WriteLine(@"
-                     
+                     NASA
                 ");
                 Terminal.WriteLine("Welcome to NASA's internal system!");
                 break;
