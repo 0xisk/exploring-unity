@@ -88,13 +88,13 @@ public class Hacker : MonoBehaviour
         switch(level)
         {
             case 1: 
-                password = level1Passwords[0];
+                password = level1Passwords[Random.Range(0, level1Passwords.Length)];
                 break;
             case 2:
-                password = level2Passwords[0];
+                password = level2Passwords[Random.Range(0, level2Passwords.Length)];
                 break;
             default:
-                Debug.logError("Invalid Level number");
+                Debug.LogError("Invalid Level number");
                 break;
         }
         Terminal.WriteLine("Please enter you password: ");
