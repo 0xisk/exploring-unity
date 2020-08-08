@@ -8,6 +8,7 @@ public class Hacker : MonoBehaviour
     const string menuHint = "You may type menu at any time.";
     string[] level1Passwords = { "books", "aisle", "shelf", "password", "font", "borrwo" };
     string[] level2Passwords = { "prisoner", "handcuffs", "holster", "uniform", "arrest" };
+    string[] level3Passwords = { "starfield", "telescope", "enviroment", "exploration", "astronauts" };
 
     // Game state 
     int level;
@@ -33,6 +34,7 @@ public class Hacker : MonoBehaviour
         Terminal.WriteLine("What would you like to hack into?");
         Terminal.WriteLine("Press 1 for the local liberary");
         Terminal.WriteLine("Press 2 for the police station");
+        Terminal.WriteLine("Press 3 for NASA!");
         Terminal.WriteLine("Enter you selection: ");
     }
     
@@ -60,7 +62,7 @@ public class Hacker : MonoBehaviour
 
     void RunMainMenu(string input)
     {
-        bool isValidLevelNumber = (input == "1" || input == "2");
+        bool isValidLevelNumber = (input == "1" || input == "2" || input == "3");
 
         if (isValidLevelNumber) 
         {
@@ -92,6 +94,9 @@ public class Hacker : MonoBehaviour
                 break;
             case 2:
                 password = level2Passwords[Random.Range(0, level2Passwords.Length)];
+                break;
+            case 3:
+                password = level3Passwords[Random.Range(0, level3Passwords.Length)];
                 break;
             default:
                 Debug.LogError("Invalid Level number");
@@ -132,6 +137,7 @@ public class Hacker : MonoBehaviour
                      /__________//
                     (__________(/ 
                 ");
+                Terminal.WriteLine("Play again with a greater challenge.");
                 break;
             case 2: 
                 Terminal.WriteLine("You got the prison key!");
@@ -140,6 +146,13 @@ public class Hacker : MonoBehaviour
                     /0 \__________
                     \__/-= ' === '
                 ");
+                Terminal.WriteLine("Play again with a greater challenge.");
+                break;
+            case 2: 
+                Terminal.WriteLine(@"
+                     
+                ");
+                Terminal.WriteLine("Welcome to NASA's internal system!");
                 break;
             default:
                 Debug.LogError("Invalid level reached!");
