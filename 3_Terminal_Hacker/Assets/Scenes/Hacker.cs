@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Hacker : MonoBehaviour
 {
+    // Game Configuration data
+    string[] level1Passwords = { "books", "aisle", "self", "password", "font", "borrwo" };
+    string[] level2Passwords = { "prisoner", "handcuffs", "holster", "uniform", "arrest" };
+
     // Game state 
     int level;
 
@@ -23,6 +27,7 @@ public class Hacker : MonoBehaviour
     void Start()
     {
         var generalGreeting = "Welcome to Terminal Hacker Game";
+        print(level1Passwords[0]);
         Terminal.WriteLine(generalGreeting);
         ShowMainMenu("Hello Iskander!");
     }
@@ -64,13 +69,13 @@ public class Hacker : MonoBehaviour
         if (input == "1")
         {
             level = 1;
-            password = "donkey";
+            password = level1Passwords[2];
             StartGame();
         } 
         else if (input == "2")
         {
             level = 2;
-            password = "Monkey";
+            password = level2Passwords[3];
             StartGame();
         } 
         else 
