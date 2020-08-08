@@ -42,6 +42,7 @@ public class Hacker : MonoBehaviour
         Terminal.WriteLine("Press 2 for the police station");
         Terminal.WriteLine("Enter you selection: ");
     }
+    
     void CookCurry(string meatToUse)
     {
         // common cooking steps go here 
@@ -104,11 +105,46 @@ public class Hacker : MonoBehaviour
     {
         if (input == password)
         {
-            Terminal.WriteLine("Well Done!");
+            DisplayWinScreen();
         } 
         else
         {
             Terminal.WriteLine("Sorry, wrong password!");
+        }
+    }
+
+    void DisplayWinScreen()
+    {
+        currentScreen = Screen.Win;
+        Terminal.ClearScreen();
+        ShowLevelReward(); 
+    }
+
+    void ShowLevelReward() 
+    {
+        switch (level) 
+        {
+            case 1: 
+                Terminal.WriteLine("Have a book...");
+                Terminal.WriteLine(@"
+                        ___________
+                       /          //
+                      /          //
+                     /__________//
+                    (__________(/ 
+                ");
+                break;
+            case 2: 
+                Terminal.WriteLine("You got the prison key!");
+                Terminal.WriteLine(@"
+                     __
+                    /0 \__________
+                    \__/-= ' === '
+                ");
+                break;
+            default:
+                Debug.LogError("Invalid level reached!");
+                break;
         }
     }
 }
