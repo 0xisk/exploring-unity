@@ -67,14 +67,14 @@ public class Hacker : MonoBehaviour
         } 
         else 
         {
-            currentScreen = Screen.Password;
             Terminal.WriteLine("Please choose a valid number");
         }
     }
 
     void StartGame() 
     {
-        Terminal.WriteLine("You have chosen level" + level);
+        currentScreen = Screen.Password;
+        Terminal.WriteLine("You have chosen level " + level);
         Terminal.WriteLine("Please enter you password: ");
     }
 }
